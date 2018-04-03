@@ -16,7 +16,12 @@ const buildDomString = (array) => {
      domString +=      `<h3 class="panel-title">${heroes.name}</h3>`;
      domString +=   `</div>`;
      domString +=    `<div class="panel-body">`;
-     domString +=       `<img class="charImage" src="${heroes.image}">`;
+     console.log(heroes.gender);
+     if (heroes.gender === 'Female'){
+       domString +=       `<img class="charImage female" src="${heroes.image}">`;
+     } else {
+       domString +=       `<img class="charImage male"src="${heroes.image}">`;
+     }
      domString +=       `<p class="charDescription">${heroes.description}"<p>`;
      domString +=    `</div>`;
      domString += `</div>`;
